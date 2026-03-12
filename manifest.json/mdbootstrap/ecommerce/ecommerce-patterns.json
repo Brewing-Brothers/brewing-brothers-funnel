@@ -1,0 +1,34 @@
+{
+  "domain": "MDBootstrap eCommerce → BB Order Management Patterns",
+  "purpose": "Order admin patterns for Phase 3+ internal tooling",
+  "patterns": [
+    {
+      "id": "MDB-E1",
+      "name": "Order Table",
+      "description": "Data table with order ID, customer, product, status, date columns.",
+      "bb_data_source": "Google Sheet — Reservations tab",
+      "tailwind_structure": "overflow-x-auto → table w-full → thead with amber headers → tbody rows",
+      "status": "Phase 3 — build /admin/orders page"
+    },
+    {
+      "id": "MDB-E2",
+      "name": "Product Management Cards",
+      "description": "Product grid with edit/price controls for admin.",
+      "bb_data_source": "Hardcoded initially → ENV vars → later database",
+      "status": "Phase 3 — prices managed via Vercel env vars for now"
+    },
+    {
+      "id": "MDB-E3",
+      "name": "Order Status Badge",
+      "description": "Color-coded status pills: New / Confirmed / Picked Up / Shipped.",
+      "tailwind_equivalent": "px-2 py-1 rounded-full text-xs font-medium",
+      "status_colors": {
+        "New":       "bg-blue-100 text-blue-800",
+        "Confirmed": "bg-amber-100 text-amber-800",
+        "Picked Up": "bg-green-100 text-green-800",
+        "Shipped":   "bg-purple-100 text-purple-800"
+      },
+      "status": "Phase 3 — use in admin order table"
+    }
+  ]
+}

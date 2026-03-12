@@ -1,0 +1,14 @@
+{
+  "name": "testimonial-card",
+  "purpose": "Customer testimonial card — social proof block",
+  "structure": {
+    "container": "rounded-2xl border border-amber-100 bg-amber-50 p-6",
+    "stars": "text-amber-500 text-lg mb-2",
+    "quote": "text-slate-700 italic leading-relaxed",
+    "name": "font-semibold mt-3 text-amber-900",
+    "location": "text-sm text-slate-500",
+    "product": "text-xs text-amber-700 mt-1 font-medium"
+  },
+  "data_fields": ["stars", "quote", "name", "location", "product"],
+  "rule": "5 stars only in MVP. Replace placeholders with real customer quotes after first pickups."
+}

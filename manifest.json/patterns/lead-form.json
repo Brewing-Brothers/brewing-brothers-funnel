@@ -1,0 +1,38 @@
+{
+  "pattern": "lead-form",
+  "purpose": "Capture customer contact for pickup + email list",
+  "bb_file": "app/page.tsx — #pickup section",
+  "variants": {
+    "pickup_reservation": {
+      "fields": [
+        { "name": "name",     "type": "text",   "placeholder": "Full Name",            "required": true },
+        { "name": "email",    "type": "email",  "placeholder": "Email",                "required": true },
+        { "name": "phone",    "type": "tel",    "placeholder": "Phone",                "required": true },
+        { "name": "quantity", "type": "select", "options": ["1 Bottle","2 Bottles","6-Pack","12-Pack","Custom"], "required": true }
+      ],
+      "cta_text": "Reserve My Pickup",
+      "action": "/api/reserve-pickup",
+      "confirmation": "/thank-you?type=pickup",
+      "backend": "Apps Script → Google Sheet → confirmation email",
+      "status": "LIVE"
+    },
+    "email_capture_popup": {
+      "fields": [
+        { "name": "email", "type": "email", "placeholder": "Enter your email", "required": true }
+      ],
+      "trigger": "exit-intent OR 30-second delay",
+      "incentive": "10% off first order",
+      "cta_text": "Get My Discount",
+      "action": "/api/subscribe",
+      "status": "Phase 4 — NOT BUILT"
+    }
+  },
+  "rules": [
+    "Pickup form: max 4 fields — name, email, phone, quantity. Friction kills conversion.",
+    "Email popup: 1 field only — email.",
+    "Use select for quantity — prevents invalid input",
+    "Always state what happens next: 'We confirm within 24 hours'",
+    "Mobile: full-width submit button, stacked fields"
+  ],
+  "brewing_brothers_fit": 5
+}

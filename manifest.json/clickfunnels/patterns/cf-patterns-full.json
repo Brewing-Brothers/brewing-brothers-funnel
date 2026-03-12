@@ -1,0 +1,88 @@
+{
+  "domain": "ClickFunnels Conversion Patterns",
+  "version": "1.0",
+  "last_updated": "2026-03",
+  "extraction_rule": "Extract conversion PRINCIPLES. Never copy proprietary code or layouts.",
+  "patterns": [
+    {
+      "id": "CF-P1",
+      "name": "Squeeze Page Hero",
+      "description": "Single dominant headline + one primary CTA above fold. No navigation. Forces decision.",
+      "bb_status": "LIVE — partial. Missing announcement bar overlay.",
+      "bb_file": "app/page.tsx",
+      "rules": [
+        "Primary CTA visible without scrolling on mobile",
+        "Max 2 CTAs total in hero",
+        "No external navigation links",
+        "Headline communicates product + location in one read"
+      ],
+      "conversion_impact": "HIGH — reduces bounce, increases first-action rate"
+    },
+    {
+      "id": "CF-P2",
+      "name": "Lead Magnet Gate",
+      "description": "Offer discount or free asset to capture email BEFORE showing price.",
+      "bb_status": "Phase 4",
+      "bb_file": "app/api/subscribe/route.ts — stub ready",
+      "incentive_options": [
+        "10% off first order",
+        "Free juice recipe PDF",
+        "Notify me when online ordering goes live"
+      ],
+      "trigger": "Exit-intent OR 30-second delay on homepage",
+      "conversion_impact": "MEDIUM — builds list before purchase decision"
+    },
+    {
+      "id": "CF-P3",
+      "name": "Offer Stack",
+      "description": "Show product + bonus + guarantee stacked visually to increase perceived value.",
+      "bb_status": "PARTIAL — structure built, prices TBD (M3 blocked on client)",
+      "bb_file": "app/page.tsx#order",
+      "elements": ["product_name", "price", "value_note", "badge_Most_Popular", "badge_Best_Value"],
+      "anchor_strategy": "Middle tier (6-Pack) highlighted as Most Popular",
+      "conversion_impact": "HIGH — anchoring middle tier lifts average order value"
+    },
+    {
+      "id": "CF-P4",
+      "name": "Social Proof Block",
+      "description": "3-5 testimonials with name, location, product purchased. Placed BEFORE price reveal.",
+      "bb_status": "LIVE — placeholder testimonials. Replace with real quotes after first pickup customers.",
+      "bb_file": "app/page.tsx — testimonials section",
+      "placement_rule": "MUST appear before pricing section — always",
+      "elements": ["quote", "name", "location", "product_purchased", "star_rating"],
+      "conversion_impact": "HIGH — social proof before ask reduces hesitation"
+    },
+    {
+      "id": "CF-P5",
+      "name": "Urgency Element",
+      "description": "Countdown timer OR limited batch notice. Creates purchase urgency.",
+      "bb_status": "Phase 4 — announcement bar is placeholder",
+      "bb_implementation": "Announcement bar → 'This week's batch: X bottles remaining'",
+      "conversion_impact": "MEDIUM — effective for repeat buyers, less critical at MVP"
+    },
+    {
+      "id": "CF-P6",
+      "name": "Order Bump",
+      "description": "Checkbox at Stripe checkout: 'Add X for $Y more'. 10-30% take rate.",
+      "bb_status": "Phase 4",
+      "bb_implementation": "Add to Stripe checkout session line_items as optional add-on",
+      "conversion_impact": "HIGH — single highest AOV lever without new page"
+    },
+    {
+      "id": "CF-P7",
+      "name": "Thank-You Upsell",
+      "description": "After payment, offer related product before order 'closes'. One-click accept.",
+      "bb_status": "Phase 4",
+      "bb_file": "app/thank-you/page.tsx — upsell section to add",
+      "conversion_impact": "MEDIUM — requires established buyer trust"
+    },
+    {
+      "id": "CF-P8",
+      "name": "Sticky Mobile CTA Bar",
+      "description": "Fixed bottom bar on mobile only, always visible at all scroll depths.",
+      "bb_status": "LIVE",
+      "bb_file": "app/page.tsx — fixed bottom div with md:hidden",
+      "conversion_impact": "HIGH — mobile conversion lift, frictionless CTA access"
+    }
+  ]
+}

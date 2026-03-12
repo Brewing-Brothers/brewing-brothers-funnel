@@ -1,0 +1,19 @@
+{
+  "name": "lead-gen-funnel",
+  "description": "Email capture funnel — Brewing Brothers newsletter + discount list",
+  "status": "Phase 4 — DO NOT BUILD before Stripe is live",
+  "trigger": "Exit-intent popup OR 30s delay on homepage",
+  "incentive_options": [
+    "10% off first order",
+    "Free juice recipe PDF",
+    "Be first to know when online ordering goes live"
+  ],
+  "sections": [
+    { "order": 1, "section": "hero-with-lead-magnet",  "status": "Phase 4" },
+    { "order": 2, "section": "email-capture-form",     "status": "Phase 4 — api/subscribe stub ready" },
+    { "order": 3, "section": "confirmation-message",   "status": "Phase 4" }
+  ],
+  "api_route": "app/api/subscribe/route.ts — stub READY",
+  "email_provider": "Brevo free (300 emails/day) OR MailerLite free (12k/month)",
+  "marcus_rule": "Build AFTER Stripe is live and first real orders confirmed"
+}

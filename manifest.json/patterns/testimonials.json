@@ -1,0 +1,43 @@
+{
+  "pattern": "testimonials",
+  "purpose": "Social proof block — reduce purchase hesitation — CF-P4",
+  "cf_equivalent": "CF-P4 Social Proof Block",
+  "bb_status": "LIVE — PLACEHOLDER testimonials. Replace after first real pickup customers.",
+  "bb_file": "app/page.tsx — testimonials section",
+  "placement_rule": "MUST appear BEFORE pricing section — always. Proof before ask.",
+  "elements": ["star_rating", "quote", "customer_name", "location", "product_purchased"],
+  "placeholder_entries": [
+    {
+      "quote": "Best juice I've had. You can taste the freshness.",
+      "name": "Sarah M.",
+      "location": "Sacramento, CA",
+      "product": "6-Pack",
+      "stars": 5,
+      "status": "PLACEHOLDER — replace with real quote"
+    },
+    {
+      "quote": "Finally a local juice brand worth driving for.",
+      "name": "James T.",
+      "location": "Orangevale, CA",
+      "product": "Pickup — 12-Pack",
+      "stars": 5,
+      "status": "PLACEHOLDER — replace with real quote"
+    },
+    {
+      "quote": "Ordered twice already. Family loves it.",
+      "name": "Lisa R.",
+      "location": "Folsom, CA",
+      "product": "12-Pack",
+      "stars": 5,
+      "status": "PLACEHOLDER — replace with real quote"
+    }
+  ],
+  "rules": [
+    "3 testimonials minimum, 5 maximum for MVP",
+    "Include customer location — builds local trust for CA customers",
+    "Include product purchased — specificity = credibility",
+    "5-star only — do not show anything below 5 stars in MVP phase",
+    "Collect real quotes from first pickup customers immediately"
+  ],
+  "brewing_brothers_fit": 5
+}

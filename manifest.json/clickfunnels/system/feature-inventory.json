@@ -1,0 +1,41 @@
+{
+  "domain": "ClickFunnels",
+  "purpose": "Complete feature inventory mapped to BB implementation status",
+  "last_updated": "2026-03",
+  "platform_decision": "DO NOT USE — $81/month, no free tier. Extract principles only.",
+  "funnel_types": [
+    { "type": "Squeeze Funnel",        "bb_equivalent": "Home page → pickup form → thank-you", "status": "LIVE" },
+    { "type": "Sales Funnel",          "bb_equivalent": "Home page → pricing → Stripe checkout", "status": "Phase 2 M5-M8" },
+    { "type": "Lead Magnet Funnel",    "bb_equivalent": "/reserve standalone page", "status": "LIVE as /reserve" },
+    { "type": "Webinar Funnel",        "bb_equivalent": "NOT RELEVANT",             "status": "REJECT" },
+    { "type": "Auto-Webinar Funnel",   "bb_equivalent": "NOT RELEVANT",             "status": "REJECT" },
+    { "type": "Membership Funnel",     "bb_equivalent": "Phase 5+ only",            "status": "FUTURE" }
+  ],
+  "page_types": [
+    { "page": "Landing Page",          "bb_built": true,  "file": "app/page.tsx" },
+    { "page": "Order Form Page",       "bb_built": true,  "file": "app/page.tsx#order" },
+    { "page": "Thank You Page",        "bb_built": true,  "file": "app/thank-you/page.tsx" },
+    { "page": "OTO / Upsell Page",     "bb_built": false, "file": "Phase 4 — app/upsell/page.tsx" },
+    { "page": "Downsell Page",         "bb_built": false, "file": "Phase 4" },
+    { "page": "Webinar Page",          "bb_built": false, "file": "REJECT" }
+  ],
+  "conversion_sections": [
+    { "section": "Hero w/ CTA",        "cf_pattern": "CF-P1", "bb_status": "LIVE" },
+    { "section": "Offer Stack",        "cf_pattern": "CF-P3", "bb_status": "PARTIAL — needs real prices" },
+    { "section": "Social Proof",       "cf_pattern": "CF-P4", "bb_status": "LIVE — placeholder testimonials" },
+    { "section": "FAQ / Objections",   "cf_pattern": null,    "bb_status": "LIVE — 6 questions" },
+    { "section": "Lead Capture Form",  "cf_pattern": null,    "bb_status": "LIVE — pickup form" },
+    { "section": "Urgency Bar",        "cf_pattern": "CF-P5", "bb_status": "Phase 4" },
+    { "section": "Order Bump",         "cf_pattern": "CF-P6", "bb_status": "Phase 4" },
+    { "section": "Sticky Mobile CTA",  "cf_pattern": "CF-P8", "bb_status": "LIVE" },
+    { "section": "Trust Badges",       "cf_pattern": null,    "bb_status": "LIVE in hero" },
+    { "section": "Announcement Bar",   "cf_pattern": null,    "bb_status": "LIVE" }
+  ],
+  "checkout_components": {
+    "payment_processor": "Stripe",
+    "payment_status": "Phase 2 M5-M8 — blocked on client prices",
+    "order_bump_status": "Phase 4",
+    "upsell_status": "Phase 4",
+    "shipping_scope": "USA only"
+  }
+}

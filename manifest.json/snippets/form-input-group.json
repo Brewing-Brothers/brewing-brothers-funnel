@@ -1,0 +1,24 @@
+{
+  "name": "form-input-group",
+  "purpose": "Reusable labeled form input — pickup reservation form",
+  "field_types": {
+    "text_input": {
+      "wrapper": "",
+      "label": "block text-sm font-medium text-slate-700 mb-1",
+      "input": "w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500"
+    },
+    "select": {
+      "label": "block text-sm font-medium text-slate-700 mb-1",
+      "select": "w-full rounded-xl border border-slate-300 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-amber-500"
+    },
+    "error_message": {
+      "class": "text-sm text-red-700 bg-red-50 rounded-xl px-4 py-3"
+    }
+  },
+  "fields_in_pickup_form": [
+    { "name": "name",     "type": "text",   "label": "Full Name",  "placeholder": "Your name",      "required": true },
+    { "name": "email",    "type": "email",  "label": "Email",      "placeholder": "you@email.com",  "required": true },
+    { "name": "phone",    "type": "tel",    "label": "Phone",      "placeholder": "916-555-0000",   "required": true },
+    { "name": "quantity", "type": "select", "label": "Quantity",   "options": ["1 Bottle","2 Bottles","6-Pack","12-Pack","Custom"], "required": true }
+  ]
+}

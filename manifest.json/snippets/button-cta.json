@@ -1,0 +1,26 @@
+{
+  "name": "button-cta",
+  "purpose": "Primary, secondary, and floating mobile CTA button variants",
+  "variants": {
+    "primary": {
+      "class": "bg-amber-700 hover:bg-amber-800 text-white px-6 py-3 rounded-2xl font-semibold transition-colors",
+      "use": "Main conversion action — Order Now, Reserve Pickup"
+    },
+    "secondary": {
+      "class": "border border-slate-300 bg-white hover:bg-slate-50 px-6 py-3 rounded-2xl font-semibold",
+      "use": "Alternative action — secondary CTA"
+    },
+    "large_primary": {
+      "class": "bg-amber-700 hover:bg-amber-800 text-white px-8 py-4 rounded-2xl font-semibold text-lg transition-colors",
+      "use": "Final CTA section — needs more visual weight"
+    },
+    "floating_mobile": {
+      "class": "fixed bottom-0 left-0 right-0 bg-amber-700 text-white py-4 text-center font-semibold md:hidden z-50",
+      "use": "CF-P8 sticky mobile bar"
+    },
+    "disabled": {
+      "class": "opacity-60 cursor-not-allowed",
+      "use": "Form submit during loading state"
+    }
+  }
+}

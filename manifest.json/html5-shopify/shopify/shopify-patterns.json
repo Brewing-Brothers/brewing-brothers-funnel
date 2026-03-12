@@ -1,0 +1,111 @@
+{
+  "domain": "Shopify eCommerce Patterns",
+  "purpose": "Shopify theme architecture converted to Next.js/Tailwind patterns for BB",
+  "extraction_rule": "Extract UX and conversion principles. Build from scratch in Next.js.",
+  "last_updated": "2026-03",
+  "patterns": [
+    {
+      "id": "SH-P1",
+      "name": "Announcement Bar",
+      "shopify_section": "announcement-bar",
+      "description": "Full-width top strip for promos, free shipping threshold, urgency.",
+      "bb_status": "LIVE — 'Fresh Batch Available' bar in app/page.tsx",
+      "bb_implementation": "Full-width amber-700 div above main content",
+      "phase": "Phase 2 — expand in Phase 3 with dynamic batch messaging"
+    },
+    {
+      "id": "SH-P2",
+      "name": "Product Card Grid",
+      "shopify_section": "product-grid",
+      "description": "3-column responsive card grid with image, name, price, CTA.",
+      "bb_status": "LIVE — pricing section uses 3-card grid",
+      "bb_implementation": "grid gap-4 sm:grid-cols-3 in app/page.tsx",
+      "phase": "Phase 2"
+    },
+    {
+      "id": "SH-P3",
+      "name": "Featured Product Block",
+      "shopify_section": "featured-product",
+      "description": "Single product highlight with image, description, quantity selector, add to cart.",
+      "bb_status": "Phase 3",
+      "bb_implementation": "Add product detail section above pricing grid",
+      "phase": "Phase 3"
+    },
+    {
+      "id": "SH-P4",
+      "name": "Image with Text Section",
+      "shopify_section": "image-with-text",
+      "description": "Left/right split: product photo + brand story or value prop.",
+      "bb_status": "Phase 3 — brand story section",
+      "bb_implementation": "md:grid-cols-2 section with product image + copy",
+      "phase": "Phase 3"
+    },
+    {
+      "id": "SH-P5",
+      "name": "Testimonials / Reviews",
+      "shopify_section": "testimonials",
+      "description": "Social proof block with star ratings, customer quotes, verified badge.",
+      "bb_status": "LIVE — placeholder testimonials in app/page.tsx",
+      "bb_implementation": "3-card grid with amber styling",
+      "phase": "Phase 2 — replace placeholders with real quotes"
+    },
+    {
+      "id": "SH-P6",
+      "name": "Multi-Column Text",
+      "shopify_section": "multicolumn",
+      "description": "3-column benefit/feature grid with icons.",
+      "bb_status": "LIVE — benefits section (Organic, Small Batch, No Preservatives)",
+      "bb_implementation": "md:grid-cols-3 with emoji icons",
+      "phase": "Phase 2"
+    },
+    {
+      "id": "SH-P7",
+      "name": "Email Signup Section",
+      "shopify_section": "email-signup",
+      "description": "Full-width email capture with incentive copy.",
+      "bb_status": "Phase 4",
+      "bb_implementation": "Add above footer — wires to /api/subscribe",
+      "phase": "Phase 4"
+    },
+    {
+      "id": "SH-P8",
+      "name": "Cart Drawer",
+      "shopify_section": "cart-drawer",
+      "description": "Slide-in cart with quantity controls, order bump, checkout CTA.",
+      "bb_status": "NOT NEEDED — Stripe Checkout handles cart",
+      "bb_implementation": "REJECT — Stripe hosted page replaces cart",
+      "phase": "REJECT"
+    },
+    {
+      "id": "SH-P9",
+      "name": "Sticky Add to Cart Bar",
+      "shopify_section": "sticky-atc",
+      "description": "Sticky header bar that appears after scrolling past product — shows price + CTA.",
+      "bb_status": "Phase 3",
+      "bb_implementation": "Fixed top bar on scroll — md:flex hidden on mobile (mobile uses bottom bar)",
+      "phase": "Phase 3"
+    },
+    {
+      "id": "SH-P10",
+      "name": "Footer with Navigation",
+      "shopify_section": "footer",
+      "description": "Multi-column footer: links, social, email signup, legal.",
+      "bb_status": "PARTIAL — simple footer text only",
+      "bb_implementation": "Expand with: About, Contact, Privacy, Terms links",
+      "phase": "Phase 3"
+    }
+  ],
+  "bootstrap_to_tailwind_map": [
+    { "bootstrap": "container",        "tailwind": "max-w-5xl mx-auto px-6" },
+    { "bootstrap": "row",              "tailwind": "grid gap-6" },
+    { "bootstrap": "col-md-4",        "tailwind": "md:col-span-1 (in grid-cols-3)" },
+    { "bootstrap": "btn btn-primary",  "tailwind": "px-6 py-3 rounded-2xl bg-amber-700 text-white font-semibold" },
+    { "bootstrap": "card",             "tailwind": "rounded-2xl border border-amber-200 bg-white p-6" },
+    { "bootstrap": "badge",            "tailwind": "px-3 py-1 rounded-full text-xs font-medium" },
+    { "bootstrap": "d-none d-md-block","tailwind": "hidden md:block" },
+    { "bootstrap": "d-md-none",        "tailwind": "md:hidden" },
+    { "bootstrap": "text-center",      "tailwind": "text-center" },
+    { "bootstrap": "mb-3",             "tailwind": "mb-3" },
+    { "bootstrap": "py-5",             "tailwind": "py-12" }
+  ]
+}

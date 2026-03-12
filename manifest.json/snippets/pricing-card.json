@@ -1,0 +1,23 @@
+{
+  "name": "pricing-card",
+  "purpose": "Product tier card — used in 3-column offer stack",
+  "variants": {
+    "standard": {
+      "container": "rounded-2xl border border-slate-200 bg-white p-6",
+      "title": "font-semibold",
+      "price": "text-2xl font-bold mt-2",
+      "note": "text-slate-700 text-sm mt-2",
+      "cta": "mt-4 w-full px-4 py-3 rounded-xl font-semibold bg-amber-700 text-white"
+    },
+    "featured": {
+      "container": "rounded-2xl border-2 border-amber-500 bg-white p-6 shadow-lg relative",
+      "badge": "absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full",
+      "title": "font-semibold",
+      "price": "text-2xl font-bold mt-2",
+      "note": "text-slate-700 text-sm mt-2",
+      "cta": "mt-4 w-full px-4 py-3 rounded-xl font-semibold bg-amber-700 text-white"
+    }
+  },
+  "data_fields": ["title", "price", "note", "priceId", "featured", "badge"],
+  "rule": "Middle tier always featured — anchors buyer toward best-value option"
+}

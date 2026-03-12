@@ -1,0 +1,28 @@
+{
+  "name": "product-funnel",
+  "description": "One-page product sales funnel — Brewing Brothers primary recipe",
+  "cf_equivalent": "ClickFunnels Sales Funnel",
+  "conversion_score_current": 4,
+  "conversion_score_target": 5,
+  "sections": [
+    { "order": 1,  "section": "announcement-bar",   "pattern": null,               "status": "LIVE — amber-700 bar" },
+    { "order": 2,  "section": "hero",               "pattern": "patterns/hero.json","status": "LIVE" },
+    { "order": 3,  "section": "benefits",           "pattern": "patterns/benefits.json","status": "LIVE" },
+    { "order": 4,  "section": "testimonials",       "pattern": "patterns/testimonials.json","status": "LIVE — placeholder" },
+    { "order": 5,  "section": "trust-badges",       "pattern": "patterns/trust-badges.json","status": "LIVE — in hero" },
+    { "order": 6,  "section": "pricing",            "pattern": "patterns/pricing.json","status": "PARTIAL — needs real prices" },
+    { "order": 7,  "section": "pickup-form",        "pattern": "patterns/lead-form.json","status": "LIVE" },
+    { "order": 8,  "section": "faq",                "pattern": "patterns/faq.json", "status": "LIVE — 6 questions" },
+    { "order": 9,  "section": "final-cta",          "pattern": "patterns/cta.json", "status": "LIVE — dual CTA section" },
+    { "order": 10, "section": "footer",             "pattern": null,               "status": "LIVE — basic text" },
+    { "order": 11, "section": "sticky-mobile-bar",  "pattern": "patterns/cta.json", "status": "LIVE — md:hidden" }
+  ],
+  "phase_3_additions": [
+    "Expand footer with links (About, Contact, Privacy, Terms)",
+    "Add FAQ accordion on mobile",
+    "Add sticky desktop header CTA bar (SH-P9)",
+    "Replace placeholder testimonials with real quotes",
+    "Add brand story / image-with-text section (SH-P4)"
+  ],
+  "next_action": "Get real prices from client → unblock M3 → Stripe → M4-M8"
+}

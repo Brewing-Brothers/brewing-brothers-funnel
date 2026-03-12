@@ -1,0 +1,19 @@
+{
+  "name": "booking-funnel",
+  "description": "Standalone pickup reservation funnel — dedicated /reserve page",
+  "status": "LIVE — app/reserve/page.tsx built",
+  "use_case": "Direct traffic to /reserve for pickup-only CTA campaigns",
+  "sections": [
+    { "order": 1, "section": "minimal-hero",   "status": "LIVE" },
+    { "order": 2, "section": "trust-badges",   "status": "LIVE" },
+    { "order": 3, "section": "pickup-form",    "status": "LIVE — wired to /api/reserve-pickup" },
+    { "order": 4, "section": "confirmation",   "status": "LIVE — redirects to /thank-you?type=pickup" }
+  ],
+  "advantages": [
+    "Single-focus — no distractions or competing offers",
+    "Faster form completion — no scrolling required",
+    "Better mobile conversion for direct link campaigns"
+  ],
+  "url": "/reserve",
+  "api": "app/api/reserve-pickup/route.ts"
+}

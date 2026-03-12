@@ -1,0 +1,48 @@
+{
+  "domain": "MDBootstrap → Tailwind Admin Dashboard Patterns",
+  "purpose": "Admin dashboard architecture for BB internal tools — Phase 3+",
+  "production_stack": "Next.js + Tailwind (NOT MDBootstrap in production)",
+  "bb_admin_needs": [
+    "Reservation log viewer (Google Sheets data)",
+    "Order status tracker (Stripe + Sheet data)",
+    "Revenue KPIs — daily/weekly/monthly",
+    "Customer list with pickup status",
+    "Batch inventory tracker"
+  ],
+  "dashboard_layout_pattern": {
+    "id": "MDB-D1",
+    "name": "KPI Card Row",
+    "mdb_component": "Cards with statistics",
+    "tailwind_equivalent": "grid grid-cols-2 md:grid-cols-4 gap-4",
+    "bb_kpis": [
+      { "label": "Total Reservations", "source": "Google Sheet row count" },
+      { "label": "Confirmed Pickups",  "source": "Sheet column filter" },
+      { "label": "Online Orders",      "source": "Stripe dashboard" },
+      { "label": "Total Revenue",      "source": "Stripe dashboard" }
+    ],
+    "status": "Phase 3 — build simple /admin page"
+  },
+  "crm_pipeline_pattern": {
+    "id": "MDB-CRM1",
+    "name": "Deal Pipeline Kanban",
+    "mdb_component": "Kanban board",
+    "bb_implementation": "Use HubSpot Free CRM instead of building",
+    "hubspot_stages": [
+      "New Lead → Contacted → Pickup Confirmed → Completed → Repeat"
+    ],
+    "status": "Phase 3 — connect HubSpot Free CRM (free forever)"
+  },
+  "analytics_pattern": {
+    "id": "MDB-A1",
+    "name": "Traffic + Conversion Chart",
+    "mdb_component": "Chart.js line chart",
+    "bb_implementation": "Vercel Analytics (free) provides this natively",
+    "metrics_to_track": [
+      "Page views",
+      "Reservation form submissions",
+      "Checkout clicks",
+      "Thank-you page conversions"
+    ],
+    "status": "Phase 3 — enable Vercel Analytics (one click in dashboard)"
+  }
+}

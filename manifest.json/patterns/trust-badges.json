@@ -1,0 +1,16 @@
+{
+  "pattern": "trust-badges",
+  "purpose": "Credential pills that reduce purchase hesitation",
+  "bb_status": "LIVE — inline in hero section",
+  "badges": [
+    { "label": "🌱 100% Organic",    "color": "bg-amber-50 border-amber-200 text-amber-800" },
+    { "label": "🧊 Cold-Pressed",    "color": "bg-amber-50 border-amber-200 text-amber-800" },
+    { "label": "📍 Local CA Farm",   "color": "bg-amber-50 border-amber-200 text-amber-800" },
+    { "label": "🚫 No Preservatives","color": "bg-amber-50 border-amber-200 text-amber-800" },
+    { "label": "🇺🇸 USA Shipping",   "color": "bg-amber-50 border-amber-200 text-amber-800" }
+  ],
+  "tailwind": "px-3 py-1 rounded-full border text-xs font-medium",
+  "placement": "Below CTAs in hero — before social proof section",
+  "phase_3_upgrade": "Replace emoji with actual SVG badge icons",
+  "brewing_brothers_fit": 5
+}

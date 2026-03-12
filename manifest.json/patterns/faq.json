@@ -1,0 +1,21 @@
+{
+  "pattern": "faq",
+  "purpose": "Handle objections before they become cart abandonment",
+  "bb_status": "LIVE — 6 questions",
+  "placement": "After pricing — before final CTA",
+  "questions": [
+    { "q": "Do you ship internationally?",      "a": "No — USA only for now." },
+    { "q": "Where exactly is pickup?",          "a": "Orangevale, California. Address confirmed after reservation." },
+    { "q": "When does online ordering go live?","a": "Very soon — Stripe is being connected. Reserve a pickup in the meantime — no payment required until pickup." },
+    { "q": "How fresh is the juice?",           "a": "Small batches, consumed fresh. Batch date shared at pickup." },
+    { "q": "Can I cancel my reservation?",      "a": "Yes — reply to your confirmation email." },
+    { "q": "What ingredients do you use?",      "a": "Organic, locally sourced produce. No preservatives, no fillers, no shortcuts." }
+  ],
+  "rules": [
+    "5-7 questions maximum for MVP",
+    "Answer every shipping/pickup question explicitly — never make visitors guess",
+    "End with a CTA: 'Still have questions? Contact us'",
+    "Phase 3: convert to accordion collapse for mobile space efficiency"
+  ],
+  "brewing_brothers_fit": 5
+}

@@ -1,0 +1,47 @@
+{
+  "last_updated": "2026-03",
+  "discipline": "Top 10 templates only. Score before analyzing. Source: html5-shopify/templates/template-scorecard-seed.json",
+  "production_stack": "Next.js App Router + Tailwind CSS — all templates converted to this stack",
+  "templates": [
+    {
+      "id": "01-landingi-product",
+      "source": "landingi.com",
+      "license": "free-tier-study",
+      "framework": "html",
+      "conversion_target": "nextjs-tailwind",
+      "sections": ["hero","features","pricing","testimonials","cta"],
+      "bb_fit": 5,
+      "status": "TO DOWNLOAD — Phase 4"
+    },
+    {
+      "id": "02-html5up-landed",
+      "source": "html5up.net",
+      "license": "CCA-3.0",
+      "framework": "html-css",
+      "conversion_target": "nextjs-tailwind",
+      "sections": ["hero","features","cta","footer"],
+      "bb_fit": 3,
+      "status": "TO DOWNLOAD — Phase 4"
+    },
+    {
+      "id": "03-getresponse-ecomm",
+      "source": "getresponse.com — free account screenshot study",
+      "license": "study-only",
+      "framework": "platform",
+      "conversion_target": "pattern-extraction-only",
+      "sections": ["hero","offer-stack","checkout","thank-you"],
+      "bb_fit": 5,
+      "status": "STUDY ONLY"
+    },
+    {
+      "id": "04-themewagon-learnhub",
+      "source": "themewagon.com",
+      "license": "free-tier",
+      "framework": "html-bootstrap",
+      "conversion_target": "nextjs-tailwind",
+      "sections": ["hero","benefits","pricing","faq","cta"],
+      "bb_fit": 4,
+      "status": "TO DOWNLOAD — Phase 4"
+    }
+  ]
+}

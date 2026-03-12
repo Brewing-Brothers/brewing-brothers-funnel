@@ -1,0 +1,42 @@
+{
+  "pattern": "pricing",
+  "purpose": "Offer stack — 3-tier product pricing — CF-P3",
+  "cf_equivalent": "CF-P3 Offer Stack",
+  "bb_status": "PARTIAL — structure LIVE, prices BLOCKED on client (M3)",
+  "bb_file": "app/page.tsx — #order section",
+  "tiers": [
+    {
+      "name": "Single Bottle",
+      "env_var": "NEXT_PUBLIC_PRICE_SINGLE",
+      "stripe_env": "NEXT_PUBLIC_STRIPE_PRICE_SINGLE",
+      "note": "Best intro — try before committing",
+      "badge": null,
+      "featured": false
+    },
+    {
+      "name": "6-Pack",
+      "env_var": "NEXT_PUBLIC_PRICE_SIXPACK",
+      "stripe_env": "NEXT_PUBLIC_STRIPE_PRICE_SIXPACK",
+      "note": "Most popular — better value per bottle",
+      "badge": "Most Popular",
+      "featured": true
+    },
+    {
+      "name": "12-Pack",
+      "env_var": "NEXT_PUBLIC_PRICE_TWELVE",
+      "stripe_env": "NEXT_PUBLIC_STRIPE_PRICE_TWELVE",
+      "note": "Best value — stock up",
+      "badge": "Best Value",
+      "featured": false
+    }
+  ],
+  "rules": [
+    "Middle tier (6-Pack) always highlighted as Most Popular — anchoring effect",
+    "Show per-bottle price on multi-packs to emphasize savings",
+    "CTA on each card: Order Now → triggers Stripe Checkout",
+    "Show Coming Soon buttons until NEXT_PUBLIC_STRIPE_ENABLED=true",
+    "Shipping note below grid: USA only"
+  ],
+  "blocker": "BLOCKED M3 — get real prices from client to unblock M4-M8",
+  "brewing_brothers_fit": 5
+}

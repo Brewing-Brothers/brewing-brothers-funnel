@@ -1,0 +1,15 @@
+{
+  "name": "announcement-bar",
+  "purpose": "Full-width urgency / promotion strip — CF-P5 equivalent",
+  "bb_status": "LIVE — static message",
+  "current_message": "🧃 Fresh Batch Available — Orangevale Pickup + USA Shipping",
+  "phase_3_upgrade": "Dynamic batch countdown — 'X bottles remaining this week'",
+  "tailwind": "w-full bg-amber-700 text-white text-center py-2 text-sm font-medium",
+  "placement": "Top of page — above all other content",
+  "message_variants": [
+    "🧃 Fresh Batch Available — Orangevale Pickup + USA Shipping",
+    "⏳ This week's batch: limited bottles remaining",
+    "🚀 Online ordering coming soon — reserve your pickup now",
+    "🌱 100% Organic · Cold-Pressed · Small Batch · Orangevale CA"
+  ]
+}

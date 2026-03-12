@@ -1,0 +1,6 @@
+template_id,source,page_type,primary_cta,hero_section,offer_stack,trust_section,faq_section,checkout_flow,upsell_flow,mobile_score,edit_simplicity,conversion_score,cf_similarity,bb_fit,notes
+01-landingi-product,landingi.com,Landing Page,Order Now,YES,YES,YES,NO,YES,NO,5,4,5,4,5,Strong product funnel — high CF similarity — Phase 4 download
+02-html5up-landed,html5up.net,Landing Page,CTA,YES,NO,NO,NO,NO,NO,4,4,3,2,3,Good hero layout only — weak conversion structure
+03-getresponse-ecomm,getresponse.com,Sales Funnel,Order Now,YES,YES,YES,NO,YES,NO,5,5,5,5,5,STUDY ONLY — highest pattern extraction value
+04-themewagon-learnhub,themewagon.com,Landing Page,Get Started,YES,YES,YES,YES,NO,NO,4,3,4,3,4,Good section structure — Bootstrap migration required
+05-html5up-editorial,html5up.net,Blog/Editorial,Read More,YES,NO,NO,NO,NO,NO,3,3,2,1,2,Blog layout — not a funnel — reference only

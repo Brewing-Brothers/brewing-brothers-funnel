@@ -1,0 +1,14 @@
+{
+  "pattern": "benefits",
+  "purpose": "3-card benefit grid — communicates value proposition",
+  "bb_status": "LIVE",
+  "bb_file": "app/page.tsx — benefits section",
+  "cards": [
+    { "icon": "🌱", "title": "100% Organic",    "body": "Certified organic ingredients — nothing synthetic, ever." },
+    { "icon": "🤝", "title": "Small Batch",      "body": "Made fresh in small runs so every bottle is at peak flavor." },
+    { "icon": "🚫", "title": "No Preservatives", "body": "What you see on the label is everything in the bottle." }
+  ],
+  "tailwind": "grid gap-6 md:grid-cols-3",
+  "card_style": "rounded-2xl p-6 bg-white border border-amber-200",
+  "brewing_brothers_fit": 5
+}

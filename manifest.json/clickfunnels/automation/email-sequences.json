@@ -1,0 +1,80 @@
+{
+  "domain": "ClickFunnels Automation → BB Implementation",
+  "purpose": "Email sequence blueprints converted from CF automation logic",
+  "platform": "Brevo (free 300/day) — implement Phase 3",
+  "sequences": [
+    {
+      "id": "SEQ-01",
+      "name": "Pickup Reservation Confirmation",
+      "trigger": "pickup form submitted → Apps Script → email fired",
+      "status": "LIVE via Apps Script MailApp",
+      "delay": "immediate",
+      "subject": "Brewing Brothers — Pickup Reserved ✅",
+      "body_summary": "Thanks [name], your pickup reservation received. We'll confirm timing within 24h.",
+      "cf_equivalent": "Immediate confirmation email in CF funnel flow"
+    },
+    {
+      "id": "SEQ-02",
+      "name": "Pickup 24h Follow-Up",
+      "trigger": "24 hours after SEQ-01",
+      "status": "Phase 3 — Brevo",
+      "delay": "24h",
+      "subject": "Confirming your Brewing Brothers pickup 🍊",
+      "body_summary": "Here's your confirmed pickup window. See you at Orangevale!"
+    },
+    {
+      "id": "SEQ-03",
+      "name": "Order Shipped Confirmation",
+      "trigger": "Stripe webhook — checkout.session.completed",
+      "status": "Phase 2 M7/M8 — wired via webhook stub",
+      "delay": "immediate",
+      "subject": "Your Brewing Brothers order is confirmed 🧃",
+      "body_summary": "Order confirmed. Shipping soon. Track link: [link]."
+    },
+    {
+      "id": "SEQ-04",
+      "name": "Post-Purchase Review Request",
+      "trigger": "3 days after SEQ-03",
+      "status": "Phase 3 — Brevo",
+      "delay": "3d",
+      "subject": "How's the juice? We'd love your feedback 🌱",
+      "body_summary": "Review request + referral incentive."
+    },
+    {
+      "id": "SEQ-05",
+      "name": "Win-Back / Repeat Purchase",
+      "trigger": "21 days after last purchase, no new order",
+      "status": "Phase 4",
+      "delay": "21d",
+      "subject": "Fresh batch dropping soon 🧃",
+      "body_summary": "New batch notification + discount for repeat buyers."
+    },
+    {
+      "id": "SEQ-06",
+      "name": "Email Capture Lead Magnet",
+      "trigger": "Exit-intent popup or 30-second delay trigger",
+      "status": "Phase 4",
+      "delay": "immediate",
+      "subject": "Here's your 10% off code 🎉",
+      "body_summary": "Lead magnet delivery + soft pitch to reserve pickup."
+    }
+  ],
+  "abandon_cart_data": {
+    "source": "Industry research — 2024 email benchmark data",
+    "best_performing_subjects": [
+      { "subject": "Oops, did something go wrong?",  "metric": "66.28% open rate" },
+      { "subject": "Forgot something?",              "metric": "47.67% open rate" },
+      { "subject": "Your Brewing Brothers Basket",   "metric": "32.73% conversion" },
+      { "subject": "Get them for 15% off!",          "metric": "High conversion" }
+    ],
+    "bb_priority_subject": "Oops, did something go wrong?",
+    "implement_phase": "Phase 3 — after Stripe live"
+  },
+  "automation_triggers": [
+    { "trigger": "form.submitted",           "action": "fire SEQ-01",         "implemented": true },
+    { "trigger": "stripe.payment.succeeded", "action": "fire SEQ-03",         "implemented": false },
+    { "trigger": "page.visit > 30s",         "action": "show email popup",    "implemented": false },
+    { "trigger": "exit-intent",              "action": "show email popup",    "implemented": false },
+    { "trigger": "no_order.21d",             "action": "fire SEQ-05",         "implemented": false }
+  ]
+}

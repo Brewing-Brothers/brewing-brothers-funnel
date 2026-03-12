@@ -1,0 +1,24 @@
+{
+  "pattern": "cta",
+  "purpose": "Drive conversion at every scroll depth — CF-P8",
+  "rule": "Repeat primary CTA after EVERY major section",
+  "placements": [
+    { "location": "Hero — above fold",       "text": "Reserve Pickup",     "style": "primary",   "status": "LIVE" },
+    { "location": "Hero — above fold",       "text": "Order Online",       "style": "secondary", "status": "LIVE" },
+    { "location": "After testimonials",      "text": "Order Now",          "style": "primary",   "status": "Phase 3" },
+    { "location": "After FAQ",               "text": "Reserve + Order",    "style": "dual",      "status": "LIVE — final CTA section" },
+    { "location": "Sticky mobile bar",       "text": "Reserve Pickup",     "style": "floating",  "status": "LIVE" }
+  ],
+  "style_definitions": {
+    "primary":   "bg-amber-700 hover:bg-amber-800 text-white px-6 py-3 rounded-2xl font-semibold",
+    "secondary": "border border-slate-300 bg-white hover:bg-slate-50 px-6 py-3 rounded-2xl font-semibold",
+    "floating":  "fixed bottom-0 left-0 right-0 bg-amber-700 text-white py-4 text-center font-semibold md:hidden"
+  },
+  "rules": [
+    "Never more than 2 CTAs visible at once",
+    "Order Now = amber-700 (primary). Reserve Pickup = white/bordered (secondary)",
+    "Sticky mobile bar: md:hidden — desktop has enough visible CTAs",
+    "Final CTA section: show both options — let user choose their path"
+  ],
+  "brewing_brothers_fit": 5
+}
