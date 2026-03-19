@@ -35,11 +35,34 @@ export async function POST(req: Request) {
     }
 
     // Forward to Apps Script
-    const forward = await fetch(url, {
-      method:  "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, phone, quantity, source: "reserve-pickup" }),
-    });
+    console.log("[reserve-pickup] url exists:", !!url);
+
+const body = await req.json();
+console.log("[reserve-pickup] incoming body:", body);
+
+const name     = String(body.name     || "").trim();
+const email    = String(body.email    || "").trim();
+const phone    = String(body.phone    || "").trim();
+const quantity = String(body.quantity || "").trim();
+
+console.log("[reserve-pickup] normalized payload:", {
+  name,
+  email,
+  phone,
+  quantity,
+  source: "reserve-pickup",
+});
+
+const forward = await fetch(url, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ name, email, phone, quantity, source: "reserve-pickup" }),
+});
+
+console.log("[reserve-pickup] forward status:", forward.status);
+
+const text = await forward.text();
+console.log("[reserve-pickup] forward raw text:", text);
 
     const text = await forward.text();
     let payload: { ok?: boolean; error?: string } = { ok: true };
@@ -55,7 +78,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: true });
 
   } catch (err) {
-    console.error("reserve-pickup error:", err);
+    console.error("[reserve-pickup] error:", err);
     return NextResponse.json(
       { ok: false, error: "Server error. Please try again." },
       { status: 500 }
