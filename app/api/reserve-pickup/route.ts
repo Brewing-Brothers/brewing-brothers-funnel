@@ -1,10 +1,4 @@
-import { NextResponse } from "next/server";
-
-// ============================================================
-// Brewing Brothers — Reserve Pickup API Route
-// Validates → forwards to Apps Script → Google Sheet
-// Status: LIVE
-// ============================================================
+﻿import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   try {
@@ -17,56 +11,29 @@ export async function POST(req: Request) {
     }
 
     const body = await req.json();
-
-    // Validate required fields
-    const name     = String(body.name     || "").trim();
-    const email    = String(body.email    || "").trim();
-    const phone    = String(body.phone    || "").trim();
+    const name = String(body.name || "").trim();
+    const email = String(body.email || "").trim();
+    const phone = String(body.phone || "").trim();
     const quantity = String(body.quantity || "").trim();
 
-    if (!name)     return NextResponse.json({ ok: false, error: "Name is required."     }, { status: 400 });
-    if (!email)    return NextResponse.json({ ok: false, error: "Email is required."    }, { status: 400 });
-    if (!phone)    return NextResponse.json({ ok: false, error: "Phone is required."    }, { status: 400 });
+    if (!name) return NextResponse.json({ ok: false, error: "Name is required." }, { status: 400 });
+    if (!email) return NextResponse.json({ ok: false, error: "Email is required." }, { status: 400 });
+    if (!phone) return NextResponse.json({ ok: false, error: "Phone is required." }, { status: 400 });
     if (!quantity) return NextResponse.json({ ok: false, error: "Quantity is required." }, { status: 400 });
 
-    // Basic email format
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ ok: false, error: "Please enter a valid email." }, { status: 400 });
     }
 
-    // Forward to Apps Script
-    console.log("[reserve-pickup] url exists:", !!url);
-
-const body = await req.json();
-console.log("[reserve-pickup] incoming body:", body);
-
-const name     = String(body.name     || "").trim();
-const email    = String(body.email    || "").trim();
-const phone    = String(body.phone    || "").trim();
-const quantity = String(body.quantity || "").trim();
-
-console.log("[reserve-pickup] normalized payload:", {
-  name,
-  email,
-  phone,
-  quantity,
-  source: "reserve-pickup",
-});
-
-const forward = await fetch(url, {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ name, email, phone, quantity, source: "reserve-pickup" }),
-});
-
-console.log("[reserve-pickup] forward status:", forward.status);
-
-const text = await forward.text();
-console.log("[reserve-pickup] forward raw text:", text);
+    const forward = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, phone, quantity, source: "reserve-pickup" }),
+    });
 
     const text = await forward.text();
     let payload: { ok?: boolean; error?: string } = { ok: true };
-    try { payload = JSON.parse(text); } catch { /* Apps Script returned non-JSON */ }
+    try { payload = JSON.parse(text); } catch { /* non-JSON response */ }
 
     if (!forward.ok || payload.ok === false) {
       return NextResponse.json(
